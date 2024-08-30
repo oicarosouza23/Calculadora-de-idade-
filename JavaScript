@@ -1,0 +1,17 @@
+function calcularIdade() {
+    const anoNascimento = document.getElementById('anoNascimento').value;
+
+    const anoAtual = new Date().getFullYear();
+
+    const idade = anoAtual - anoNascimento;
+
+    let mensagem = `Você tem ${idade} anos.`;
+
+    if (idade >= 18) {
+        mensagem += " É maior de idade.";
+    } else {
+        mensagem += " É menor de idade.";
+    }
+
+    document.getElementById('resultado').textContent = mensagem;
+}
